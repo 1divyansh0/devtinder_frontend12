@@ -37,8 +37,7 @@ const navigate = useNavigate();
   toast.success(`${firstname}, Complete your Profile!`)
   navigate("/profile")
 }catch(err){
-  
-  
+ toast.error(err?.response?.data);
 }
 }
 
@@ -98,12 +97,15 @@ const handler =  async()=>{
    </fieldset>
        <fieldset className="fieldset">
   <legend className="fieldset-legend text-xl">Enter Your Gender</legend>
-  <input type="text" className="input" placeholder="Type Gender in Small Letters" value={gender} onChange={
-    (e)=>{
-        setgender(e.target.value)
-
-    }
-  } />
+  <select
+    className="input"
+    value={gender}
+    onChange={(e) => setgender(e.target.value)}
+  >
+    <option value="">Select Gender</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
  
    </fieldset>
    

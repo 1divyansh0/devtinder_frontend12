@@ -73,7 +73,9 @@ const Navbar = () => {
       })
     
       dispatch(removeuser());
+      navigate("/home")
       toast.error("Logged Out!")
+
      
 
     }catch(err){
@@ -126,7 +128,7 @@ const Navbar = () => {
         </li>
         <li><Link to="/request"  onClick={requesthandle}>Requests</Link></li>
         <li><Link to="/connections"  onClick={requestconn}>Connections</Link></li>
-        <li><Link onClick={handlelogout} to="/Home">Logout</Link></li>
+        <li><Link onClick={handlelogout} >Logout</Link></li>
       </ul>:""}
     </div>
   </div>
