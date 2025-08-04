@@ -103,8 +103,8 @@ const handler =  async()=>{
     onChange={(e) => setgender(e.target.value)}
   >
     <option value="">Select Gender</option>
-    <option value="male">male</option>
-    <option value="female">female</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
   </select>
  
    </fieldset>

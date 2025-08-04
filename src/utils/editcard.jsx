@@ -34,7 +34,7 @@ const editcard = ({user}) => {
     toast.success("Profile Saved")
    }
    catch(err){
-    console.log(err);
+    toast.error(err);
 
    }
  }
@@ -72,10 +72,15 @@ const editcard = ({user}) => {
    </fieldset>
        <fieldset className="fieldset">
   <legend className="fieldset-legend text-xl">Gender</legend>
-  <input type="text"  value={gender} className="input" placeholder="Type here" onChange={(e)=>{
-    setgender(e.target.value)
-  }}/>
-  
+  <select
+    value={gender}
+    onChange={(e) => setgender(e.target.value)}
+    className="input"
+  >
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
    </fieldset>
   <fieldset className="fieldset">
   <legend className="fieldset-legend text-xl">Skills</legend>
